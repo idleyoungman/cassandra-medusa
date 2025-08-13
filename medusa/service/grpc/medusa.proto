@@ -15,6 +15,9 @@ service Medusa {
 
   rpc PurgeBackups(PurgeBackupsRequest) returns (PurgeBackupsResponse);
 
+  // Purge backups for decommissioned nodes
+  rpc PurgeDecommissioned(PurgeBackupsRequest) returns (PurgeBackupsResponse);
+
   rpc PrepareRestore(PrepareRestoreRequest) returns (PrepareRestoreResponse);
 }
 
